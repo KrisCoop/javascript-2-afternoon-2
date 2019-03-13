@@ -128,7 +128,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  let numsEven = [];
+  let numsOdd = [];
+  let numsTotal = [numsEven, numsOdd];
+  for (var i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      numsEven.push(numbersArray[i]);
+    }
+    else {
+      numsOdd.push(numbersArray[i]);
+    }
+  };
+  return numsTotal;
+}
+console.log(divider(numbersArray));
 
 
 
@@ -149,7 +163,21 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+//write a function named finder with an array param
+//give the function a random number using var above
+//for loop, checking for the random number
+// if statement - if true, return true, if not, false.
+
+function finder(array) {
+  let flagger = false;
+  let randomNum = getRandomArbitrary();
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === randomNum) {
+      flagger = true
+    }
+  }
+  return flagger;
+}
 
 
 
@@ -162,7 +190,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 /*
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
 
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
+  //Write a function called removeItem //that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
   If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
 
   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
@@ -178,17 +206,31 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+//make function called removeItem
+//give function 2 arguments: myGroceryList, item
+//if param2 matches an item in param1, remove that item from myGroceryList using .splice and .indexOf(item)
+
+//then, write ANOTHER FUNCTION called addItem
+//give addItem function 2 arguments, #1 is myGroceryList, and #2 is 'item' to add to grocery list using .push
+//in both functions, check to see if the arguments are 'truthy'
+  //if they are not, return an empty array.
 
 
 
 ////////// PROBLEM 9 //////////
 
 /*
-  Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
+  Write a function /// called maker /// that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
 //Code Here
+
+///make a function called maker (it doesn't take in any parameters)
+///in the function, make an empty array
+///make a for loop that runs 250 times
+///each time it runs, it adds a new number with .push to the new array
+///each number that gets pushed in is one bigger than the last number  
+///finish by returning the new array
 
 
 
@@ -199,12 +241,18 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 // Do not edit the code above.
 
 /*
-  Write a function called addTen that is given 'numbers' as it's only argument.
-  Return a new array after adding ten to each item in numbers. 
+  Write a function /// called addTen /// that is given 'numbers' as it's only argument. ///
+  Return a new array after adding ten to each item in numbers. ///
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
 //Code Here
+
+///write a function called addTen
+///it takes numbers as a parameter
+///it makes a new empty array
+///we coul use .forEach() to add 10 to the number and then .push that new number to the new array
+///finish by returning the new empty array
 
 
 
